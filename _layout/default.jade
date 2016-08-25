@@ -18,8 +18,11 @@ html(lang='Es-Py')
       Estas usando un nevegador <strong>viejo</strong>.
       Por favor <a href="http://browsehappy.com/">actualiza tu navegador</a> para mejorar tu experiencia.
     <![endif]-->
-
-    block body
+    .home-wrap
+      include ../_includes/header
+      block body
+    include ../_includes/footer
+    include ../_includes/slide
     
     script(type='text/javascript',src='https://code.jquery.com/jquery-2.1.4.min.js')
     //- script(type='text/javascript',src='assets/js/jquery.mixitup.min.js')

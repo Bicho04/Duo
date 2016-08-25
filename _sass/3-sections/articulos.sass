@@ -1,0 +1,60 @@
+section.articulos
+	@include display(flex)
+	@include flex-wrap(wrap)
+	@include justify-content(center)
+	padding: 5em 0
+	@media screen and (min-width: $small-screen)
+		@include justify-content(space-between)
+	h2.categoria
+		@include flex(100%)
+		color: $color-claro
+		font-size: 1.8em
+		padding: 1rem
+		margin-bottom: 2em
+		border-radius: $base-border-radius
+		@include background-image( linear-gradient(to bottom, lighten($color-primary,10), $color-primary) )
+		box-shadow: 0 0.1em 0.5em $color-claro
+		
+	article.articulo
+		display: inline-block
+		@include background-image( linear-gradient(to top, rgba(255,255,255,0.9), rgba(200,200,200,0.9)) )
+		border-radius: $base-border-radius
+		width: 290px
+		margin-bottom: 4em 
+		padding: 1em 1em 2em
+		box-shadow: 0 0.1em 0.5em $color-oscuro
+		position: relative
+		figure
+			position: relative
+			margin: 0
+			height: 240px
+			width: 260px
+			box-shadow: 0 0.1em 0.2em $color-oscuro
+			figcaption
+				background-color: lighten($color-primary,20)
+				padding: 0.5em 1em
+				box-shadow: 0 0.1em 0.3em $color-oscuro
+				top: 2.8em
+				right: -1.2em
+				color: $color-claro
+				position: absolute
+				display: inline-block
+		h3.title
+			font-size: 1.2em
+			line-height: 0.8em
+			margin: 0.5em 0
+		p
+			font-size: 0.8em
+			margin: 0 
+		p.price
+			text-align: right
+			position: absolute
+			bottom: 1em
+			right: 1.5em
+			font-weight: 600
+			color: $color-primary
+			&:after
+				font-size: 0.9em
+				content: ',00 $'
+				position: relative
+				bottom: 0.2em

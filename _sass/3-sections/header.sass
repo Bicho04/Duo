@@ -13,12 +13,12 @@ header.header
 		// position: relative
 		// bottom: 3.75em
 		margin: 0 auto 1.5em
+		@include background-image( linear-gradient(to top, rgba(255,255,255,0.4), rgba(0,0,0,0.4)) )
+		border-bottom-right-radius: 1em
 		@include media($large-screen) 
 			display: block
 			margin: 0
 		a.logo-img
-			@include background-image( linear-gradient(to top, rgba(255,255,255,0.4), rgba(0,0,0,0.4)) )
-			border-bottom-right-radius: 1em
 			display: block
 			margin: auto
 			text-decoration: none
@@ -51,20 +51,24 @@ header.header
 
 			li,
 				background-color: $color-primary
-				border-bottom: darken($color-claro,30) 2px solid
-				border-top: darken($color-claro,10) 2px solid
+				border-bottom: darken($color-claro,30) 1px solid
+				border-top: darken($color-claro,10) 1px solid
 				border-radius: 0.5em 
+				margin: 1px 0
+				padding-top: 0.5em
+				padding-bottom: 0.5em
 				@include media($small-screen) 
 					padding: 1em 0
-					border-radius: 0
-					border-bottom: darken($color-claro,30) 2px solid
-					border-top: darken($color-claro,10) 2px solid
-					&:first-child
-						border-left: darken($color-claro,20) 2px solid
-						border-radius: 0.5em 0 0 0.5em
-					&:last-child
-						border-radius: 0 0.5em 0.5em 0
-						border-right: darken($color-claro,20) 2px solid
+					border-radius: 0.5em
+					border: darken($color-claro,30) 2px solid
+					// border-bottom: darken($color-claro,30) 2px solid
+					// border-top: darken($color-claro,10) 2px solid
+					// &:first-child
+					// 	border-left: darken($color-claro,20) 2px solid
+					// 	border-radius: 0.5em 0 0 0.5em
+					// &:last-child
+					// 	border-radius: 0 0.5em 0.5em 0
+					// 	border-right: darken($color-claro,20) 2px solid
 				&:hover
 					background-color: darken($color-primary,5)
 				a 
